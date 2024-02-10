@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAÇA ENQUANTO</title>
+</head>
+<body>
+
+    <!-- DIV -->
+    <div></div>
+
+
+    <!-- SCRIPT -->
+    <script>
+
+    //  CAPTURA O NÚMERO DO USUÁRIO
+    let numero = parseFloat(prompt('Informe um número'));
+
+    // OBTER O ELEMENTO DIV
+    let elemento = document.querySelector('div')
+
+
+    // CONDICIONAL
+    if(numero < 0){
+        elemento.innerHTML = '<p> Informe apenas números positivos </p>'
+        }else{
+            
+            let indice = 0
+            do{
+                elemento.innerHTML += `<p> ${indice}</p>`
+                indice++
+            }while(indice <= numero)
+        }
+
+        
+    </script>
+    
+</body>
+</html>

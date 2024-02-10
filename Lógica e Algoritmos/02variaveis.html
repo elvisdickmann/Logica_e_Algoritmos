@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> VARIÁVEIS </title>
+</head>
+
+<body>
+
+    <input type="text" placeholder="Informe seu nome" class="nome">
+    <input type="number" placeholder="Informe sua idade" class="idade">
+    <button onclick="acao()">Enviar</button>
+
+    <p></p>
+
+    <script>
+
+        function acao() {
+
+
+            // CAPTURAR  os INPUTS
+            var nome = document.querySelector('.nome');
+            var idade = document.querySelector('.idade');
+
+            // EXIBIR A INFORMAÇÃO CONTIDA NO INPUT
+            // document.querySelector('p').innerText = 'Bom dia ' + nome.value + ' você tem ' + idade.value + ' anos.';
+            document.querySelector('p').innerText = `Bom dia ${nome.value} você tem ${idade.value} anos.`
+
+            //   LIMPAR O INPUT
+            nome.value = '';
+
+            // DEIXAR CURSOS NO INPUT NOME
+            nome.focus();
+
+            // MUDAR COR  INPUT NOME
+            nome.style.backgroundColor = '';
+        }
+
+        // var nome  = 'Elvis';
+
+        // prompt "CRIA UMA JANELA PERGUNTANDO O NOME"
+        // var nome = prompt('Informe seu nome');
+
+    </script>
+
+</body>
+
+</html>

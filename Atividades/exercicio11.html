@@ -1,0 +1,51 @@
+<!-- 11º Criar um sistema para realizar o fatorial, peça apenas um número, exemplo:
+
+    a) Se informar o valor 3: 6
+
+    b) Se informar o valor 5: 120
+
+    Exemplo de cálculo:
+    5 * 4 = 20
+    20 * 3 = 60
+    60 * 2 = 120
+    120 * 1  = 120 -->
+
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11</title>
+</head>
+
+<body>
+    <input type="number">
+    <button onclick="acao()">Fatorial</button>
+</body>
+
+<script>
+    function acao(){
+        let numero  = parseFloat(document.querySelector('input').value)
+        let antecessor = numero -1;
+        let calculo =   numero * antecessor;
+
+        // Exibir estrutura
+        document.write(`${numero}  *  ${antecessor} =  ${calculo} <br>`)
+
+        while (antecessor > 1) {
+            antecessor --
+            
+            let calculoTemp = calculo * antecessor
+
+            // Exibir estrutura
+            document.write(`${calculo} * ${antecessor} = ${calculoTemp} <br>`)
+
+            // Atribuir o valor de calculoTemp na variavel cálculo
+            calculo = calculoTemp
+            
+        }
+    }
+</script>
+
+</html>

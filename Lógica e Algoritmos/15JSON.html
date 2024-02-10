@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+
+    <!-- JSON JAVASCRIPT OBJECT NOTATION -->
+    <script>
+        let produto = {
+            'nome': 'Iphone15',
+            'valor': 5000,
+            'segmento':'telefonia'
+        }
+
+        // TEXTO EM FORMATO JSON
+        let prod = '{"nome":"Iphone 15", "valor": 5000}'
+
+        // EXIBIR JSON
+        document.write(JSON.stringify(produto))
+
+        // EXIBIR TEXTO JSON
+        document.write(JSON.parse(prod));
+
+    </script>
+    
+</body>
+</html>

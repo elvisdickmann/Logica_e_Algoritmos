@@ -1,0 +1,60 @@
+<!-- 6ª Utilizando como base o mês de janeiro de 2024, peça uma data entre 1 a 31, retorne o dia da semana, exemplos:
+    a) 1: Deverá retornar segunda-feira 
+
+    b) 12: Deverá retornar sexta-feira
+
+    c) 32: Deverá retornar que o número informado não existe
+ -->
+
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 06</title>
+  </head>
+  <body>
+    <form>
+      <input
+        type="number"
+        name="numero"
+        id="num"
+        placeholder="Informe uma data"
+      />
+      <input type="+button" value="Enviar" onclick="acao()" />
+    </form>
+    <script>
+      function acao() {
+        let data = parseFloat(document.querySelector("#num").value);
+
+        if (
+          data == 6 ||
+          data == 7 ||
+          data == 13 ||
+          data == 14 ||
+          data == 20 ||
+          data == 21 ||
+          data == 27 ||
+          data == 28
+        ) {
+          alert("Final de semana!");
+        } else {
+          alert("Dia de semana!");
+        }
+      }
+    </script>
+
+    <!-- <script>
+    function acao(params) {
+         let numero = document.getElementById('num').value
+         let diaDaSemana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"][new Date(2024, 0, numero).getDay()];
+
+         if (numero < 1 || numero > 31) {
+            console.log(`número informado não existe ${numero}`)
+         } else {
+            console.log(diaDaSemana);
+         }
+      } -->
+    <!-- </script> -->
+  </body>
+</html>

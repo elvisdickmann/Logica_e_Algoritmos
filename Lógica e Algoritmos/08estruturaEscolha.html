@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura Escolha</title>
+</head>
+
+<body>
+
+    <!-- HTML -->
+    <select onchange="descricao()">
+        <option value="0">Selecione uma linguagem</option>
+        <option value="1">HTML</option>
+        <option value="2">CSS</option>
+        <option value="3">JavaScript</option>
+    </select>
+
+    <p></p>
+
+    <!-- SCRIPT -->
+
+    <script>
+
+        function descricao() {
+
+            // OBTER O VALOR SELECIONADO
+            let linguagem = parseInt(document.querySelector('select').value)
+
+
+            // ESTRUTURA DE ESCOLHA
+            switch (linguagem) {
+                case 1: document.querySelector('p').innerText = 'Linguagem de marcação'; break;
+                case 2: document.querySelector('p').innerText = 'Linguagem de estilo'; break;
+                case 3: document.querySelector('p').innerText = 'Linguagem de Programação'; break;
+                default: document.querySelector('p').innerText = '';
+
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

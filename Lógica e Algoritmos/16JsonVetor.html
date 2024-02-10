@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON VETOR</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        div {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+
+        table {
+            width: 500px;
+            margin: 0 auto;
+            color: black;
+            font-weight: bold;
+
+        }
+
+        tr {
+            background-color: bisque;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgb(195, 184, 184);
+            color: rgb(57, 54, 54);
+        }
+
+        td {
+            border: solid 2px black;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div>
+        <table></table>
+    </div>
+
+    <script>
+
+        // VETOR DE PESSOAS
+
+        let pessoas = [
+            { 'nome': 'Elvis', 'idade': 28 },
+            { 'nome': 'Taianne', 'idade': 29 },
+            { 'nome': 'Láscia', 'idade': 50 },
+            { 'nome': 'Gabriel', 'idade': 26 },
+            { 'nome': 'Ozzy', 'idade': 28 }
+        ]
+
+        // OBTER O ELEMENTO DE TABLEA
+        let tabela = document.querySelector('table')
+
+        // LAÇO DE REPETIÇÃO
+        for (let i = 0; i < pessoas.length; i++) {
+
+            // CRIA UMA NOVA LINHA
+            let linha = tabela.insertRow(-1)
+
+            // CRIA UMA NOVA COLUNA
+            let colunaNome = linha.insertCell(0)
+            let colunaIdade = linha.insertCell(1)
+
+            // INFOS DA COLUNA
+            colunaNome.innerText = pessoas[i].nome
+            colunaIdade.innerText = pessoas[i].idade
+
+
+        }
+    </script>
+
+</body>
+
+</html>

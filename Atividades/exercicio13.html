@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 13</title>
+</head>
+
+<body>
+
+    <script>
+        let arrayNomes = [];
+        let nome;
+
+        do {
+            nome = prompt("Digite um nome");
+            if (nome !== "sair" && nome !== null) {
+                arrayNomes.push(nome);
+            }
+        } while (nome !== "sair" && nome !== null);
+
+        console.log("Quantidade de nomes informados: " + arrayNomes.length);
+
+        if (arrayNomes.length > 0) {
+            let nomeMaiorCaracteres = arrayNomes.reduce((nome1, nome2) => nome1.length > nome2.length ? nome1 : nome2);
+            console.log("Nome com o maior número de caracteres: " + nomeMaiorCaracteres);
+        }
+    </script>
+</body>
+
+</html>

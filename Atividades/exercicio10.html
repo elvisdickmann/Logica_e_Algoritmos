@@ -1,0 +1,48 @@
+<!-- 10ª Serão pedidos dois números, retorne o valor entre eles, exemplos:
+    a) 1 e 9, retorne: 1 2 3 4 5 6 7 8 9
+
+    b) 6 e 10, retorne: 6 7 8 9 10
+
+    c) 15 e 5, retorne: 5 6 7 8 9 10 11 12 13 14 15 -->
+
+
+/<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <input type="number" id="n1">
+    <input type="number" id="n2">
+    <button onclick="acao()">Enviar</button>
+
+    <script>
+        function acao() {
+            let number1 = parseFloat(document.querySelector('#n1').value)
+            let number2 = parseFloat(document.querySelector('#n2').value)
+
+            if (number1 < number2) {
+                while (number1 <= number2) {
+                    document.write(number1 + ' ')
+                    number1++
+                }
+            } else {
+                while (number2 <= number1) {
+                    document.write(number2 + ' ')
+                    number2++
+
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

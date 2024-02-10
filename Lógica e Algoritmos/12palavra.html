@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PALAVRA</title>
+</head>
+
+<body>
+
+
+    <!-- FORMULÁRIO -->
+    <input type="text" placeholder="Escreva algo"></input>
+    <button onclick="acao()">Enviar</button>
+
+    <!-- CRIAR DIV -->
+    <div></div>
+
+    <script>
+
+        function acao() {
+
+            // OBTER O VALOR DO INPUT
+            let palavra = document.querySelector('input').value
+
+            //    CONTADORES
+            let vogais = 0
+            let consoantes = 0
+
+            // INDICE
+            let indice = 0
+
+            // LAÇO
+            while (indice < palavra.length) {
+
+                let letra = palavra.charAt(indice)
+
+                if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
+                    vogais++
+
+                } else {
+                    consoantes++
+                }
+
+                indice++
+
+            }
+
+            // EXIBIR DADOS
+            document.querySelector('div').innerHTML = `<p>A palavra ${palavra} possui ${palavra.length} caracteres`
+            document.querySelector('div').innerHTML += `<p>Vogais: ${vogais} </p>`
+            document.querySelector('div').innerHTML += `<p>Consoantes: ${consoantes} </p>`
+        }
+    </script>
+
+</body>
+
+</html>

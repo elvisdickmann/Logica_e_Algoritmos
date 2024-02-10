@@ -1,0 +1,71 @@
+<!-- 4ª Crie um sistema para conversão de horas. Informe a hora atual e a cidade que deseja saber o horário, exemplos:
+    a) 14 - Tóquio, deverá retornar 2, pois Tóquio são +12 horas
+
+    b) 17 - Lisboa, deverá retornar 20, pois Lisboa são +3 horas
+
+    c) 19 - Cidade do México, deverá retornar 16, pois Cidade do México são -3 horas
+
+Defina pelo menos três cidades ao redor do mundo para elaborar esta atividade.
+
+ -->
+
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+</head>
+
+<body>
+    <form>
+        <input type="number" id="hora">
+        <select id="cidade">
+            <option value="0">Selecione uma Cidade</option>
+            <option value="1">Tóquio</option>
+            <option value="2">Lisboa</option>
+            <option value="3">Cidade do México</option>
+        </select>
+
+        <input type="button" value="Verificar" onclick="acao()">
+
+    </form>
+
+    <script>
+        function acao() {
+            let hora = parseFloat(document.querySelector('#hora').value);
+            let cidade = document.querySelector('#cidade').value;
+            //alert(hora + ' ' + cidade );  
+
+            if (cidade == "1") {
+                hora += 12
+            } else if (cidade == "2") {
+                hora += 3;
+            } else {
+                hora -= 3;
+            }
+
+
+
+            // Verifica se a hora é superior a 23
+            if (hora > 23) {
+                hora -= 24
+            }
+
+            // Retorno 
+            if (cidade === '1') {
+                alert('Em Tóquio é ' + hora)
+            } else if (cidade === '2') {
+                alert('Em Lisboa é ' + hora)
+            } else {
+                alert('Na cidade do México é ' + hora)
+            }
+        }
+    </script>
+
+
+
+</body>
+
+</html>

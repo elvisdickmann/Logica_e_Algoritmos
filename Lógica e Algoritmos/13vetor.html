@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VETOR</title>
+</head>
+
+<body>
+
+    <ul>
+
+
+    </ul>
+
+    <!-- DIVISÃO -->
+    <hr>
+
+    <script>
+
+        // VETOR
+        let nomes = ['Ana', 'Bruna', 'Carlos']
+
+        // Cadastrar um novo nome vetor
+        nomes.push('Dênis')
+
+        // Remover um nome no vetor 
+        nomes.splice(2, 1)
+
+        // Alterar um registro
+        nomes[0] = 'Aline'
+
+        // EXIBIR VIA document.write
+        document.write(`Conteúdos do Vetor ${nomes}`)
+        document.write(`<hr>`)
+        document.write(`Quantidade de registros: ${nomes.length}`)
+
+        // LAÇO DE REPETIÇÃO      FOR
+        for (let index = 0; index < nomes.length; index++) {
+            let elementoNome = document.createElement('li')
+            elementoNome.innerText = nomes[index];
+            document.querySelector('ul').appendChild(elementoNome)
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

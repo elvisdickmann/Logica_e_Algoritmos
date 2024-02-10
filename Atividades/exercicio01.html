@@ -1,0 +1,80 @@
+
+<!-- 1ª Peça três notas e retorne a média. -->
+
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO 1</title>
+
+    <style>
+
+
+        form{
+            background-color: rgb(223, 217, 217);
+            width: 530px;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+
+        input[type="number"]{
+            width: 500px;
+            margin-top:10px;
+            margin-left:  5px;        
+        }
+
+        input[type="button"]{
+            margin-top: 10px;
+            margin-bottom: 1opx;
+            margin-left: 5px;
+            background-color: bisque;
+            color:black;
+        }
+
+        img {
+            width: 30px;
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+<body>
+    <form>
+        <img src="imagens/calculadora.png">
+     <input type="number" id="nota1" placeholder="Primeira nota">
+     <input type="number" id="nota2" placeholder="Segunda nota">
+     <input type="number" id="nota3" placeholder="Terceira nota">
+     <input type="button" value="Realizar Média" onclick="acao()">
+    </form>
+
+    <h1></h1>
+
+    <script>
+
+        function acao() {
+
+        let nota1 = parseFloat(document.querySelector('#nota1').value);
+        let nota2 = parseFloat(document.querySelector('#nota2').value);
+        let nota3 = parseFloat(document.querySelector('#nota3').value); 
+
+        // Realizar Média
+        let media = (nota1+nota2+nota3) /3;
+        
+        // Exibir a média
+        document.querySelector('h1').innerText = 'A média é ' + media.toFixed(2);
+        }     
+
+        
+
+    </script>
+    
+</body>
+</html>

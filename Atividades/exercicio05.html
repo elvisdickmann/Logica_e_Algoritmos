@@ -1,0 +1,71 @@
+<!--5ª Precisamos descobrir qual o tipo do triângulo, peça três valores, sendo eles:
+    - Lado Direito
+    - Lado Esquerdo
+    - Lado Inferior
+
+Dependendo dos valores informados, retorne o tipo de triângulo, que pode ser:
+    - Isósceles: Dois lados possuem a mesma medida e um lado diferente das demais 
+    - Escaleno: Os três lados possuem medidas distintas
+    - Equilatero: Os três lados possuem as mesmas medidas
+  -->
+
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EXERCICIO 05</title>
+
+    <style>
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      input {
+        padding: 0.5rem 1rem;
+        min-width: 200px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <input type="text" placeholder="Lado 1" id="valor1" />
+      <input type="text" placeholder="Lado 2" id="valor2" />
+      <input type="text" placeholder="Lado 3" id="valor3" />
+      <input type="button" value="Enviar" onclick="acao()" />
+    </form>
+
+    <script>
+      let valor1 = document.querySelector("#valor1");
+      let valor2 = document.querySelector("#valor2");
+      let valor3 = document.querySelector("#valor3");
+
+      function acao() {
+        if (
+          valor1.value == valor2.value &&
+          valor3.value != valor1.value &&
+          valor2.value != valor3.value
+        ) {
+          console.log(" Isóceles");
+        } else if (
+          valor1.value !== valor2.value &&
+          valor3.value != valor1.value &&
+          valor2.value != valor3.value
+        ) {
+          console.log("Escaleno");
+        } else {
+          console.log("Equilatero");
+        }
+      }
+    </script>
+  </body>
+</html>

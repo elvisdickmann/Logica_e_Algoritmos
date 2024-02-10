@@ -1,0 +1,64 @@
+<!-- 3ª Peça um número, retorne se é um número positivo ou negativo. -->
+
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<style>
+    form {
+        background-color: rgb(223, 217, 217);
+        width: 530px;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+
+    input[type="number"] {
+        width: 500px;
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+
+    input[type="button"] {
+        margin-top: 10px;
+        margin-bottom: 1opx;
+        margin-left: 5px;
+        background-color: bisque;
+        color: black;
+    }
+
+    img {
+        width: 30px;
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+</style>
+
+<body>
+
+    <form>
+        <input type="number" id="numero" placeholder="Informe o número">
+        <input type="button" value="Clique" onclick="acao()">
+    </form>
+
+    <script>
+        function acao(){
+            let numero = document.querySelector('#numero').value;
+
+        if (numero >= 0) {
+            alert('Número Positivo')
+            }else{
+                alert('Número Negativo')
+             }
+        }
+    </script>
+
+</body>
+</html>

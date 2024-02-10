@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAÇO ENQUANTO</title>
+</head>
+
+<body>
+
+    <!-- PARAGRAFO -->
+    <p></p>
+
+
+    <!-- SCRIPT -->
+    <script>
+
+        // OBTER ELEMENTO 'p'
+        let paragrafo = document.querySelector('p')
+
+        // LAÇO DE REPETIÇÃO
+        let indice = 1
+
+        while (indice <= 100) {
+            paragrafo.innerHTML += indice
+            paragrafo.innerHTML += ' é ' + (indice % 2 == 0 ? 'par' : 'ímpar')
+            paragrafo.innerHTML += '<br>'
+
+            indice++
+
+        }
+
+    </script>
+</body>
+
+</html>
